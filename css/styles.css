@@ -225,10 +225,11 @@ ul {
   padding-top: 10px;
   padding-bottom: 4px;
   color: var(--text-color);
+  font-weight: 400;
+  font-size: 12px;
 }
 .form-area {
-  margin-top: 4px;
-  display: inline-flex;
+  display: block;
   align-items: center;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -237,32 +238,34 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-area:hover,
-.form-area:focus {
+
+.form-area:focus-within {
   border-color: var(--brand-logo-color);
   fill: var(--brand-logo-color);
 }
+
 .form-area input {
   border: none;
   outline: none;
   padding-left: 12px;
 }
-.form-area input:hover,
 .form-area input:focus {
   outline: none;
 }
 .comment-area {
+  margin-top: 4px;
   padding: 12px 16px;
   resize: none;
+  outline: none;
   color: var(--text-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
-  color: var(--text-color);
+  border-radius: 4px;
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.comment-area:hover,
-.comment-area:focus {
+
+.comment-area:focus-within {
   border-color: var(--brand-logo-color);
 }
 ::placeholder {
@@ -284,12 +287,13 @@ ul {
   column-gap: 8px;
 }
 .form-licens-checkbox {
+  top: 3px;
   position: relative;
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   width: 16px;
   height: 15px;
   border-radius: 2px;
-  padding: 0;
 }
 .checkbox {
   position: absolute;
@@ -308,7 +312,6 @@ ul {
   border: 2px solid var(--logo-color-primary);
   cursor: pointer;
   padding: 3px 1px 2px 2px;
-
   transition-property: border-color, color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -317,7 +320,10 @@ ul {
   background-color: var(--brand-logo-color);
   border-color: var(--brand-logo-color);
   fill: var(--brand-color-white);
+  stroke: var(--brand-color-white);
+  stroke-width: 0.2px;
 }
+
 .form-links {
   color: var(--brand-logo-color);
   text-decoration: underline;
@@ -332,6 +338,7 @@ ul {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  margin-bottom: 40px;
 }
 .is-hidden .modal {
   transform: translate(-50%, -50%) scale(1) rotate(90deg);
